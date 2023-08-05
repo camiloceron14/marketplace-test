@@ -1,0 +1,26 @@
+<form class="offer-form">
+  <h3>Post new Offer</h3>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input id="title" class="" placeholder="Title"/>
+  </div>
+  <div class="form-group">
+    <label for="picture-url">Picture URL</label>
+    <input id="picture-url" placeholder="offers/iphone.jpg"/>
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea id="description" class="" placeholder="Description" rows="5"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input id="location" class="" placeholder="Country, city, neighborhood, the office, my desk, etc..."/>
+  </div>
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select id="category" class="">
+      <option [value]="item" *ngFor="let item of categories">{{item}}</option>
+    </select>
+  </div>
+  <button type="submit" class="offer-submit-button">Create</button>
+</form>

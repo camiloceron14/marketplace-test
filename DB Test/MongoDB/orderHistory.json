@@ -1,0 +1,151 @@
+[
+	{
+		"_id": 1,
+		"OrderDate": "2023-01-15T00:00:00",
+		"CustomerId": 1,
+		"CustomerName": "Tom Cruise",
+		"CustomerLocationCity": "New York",
+		"CustomerLocationHierarchy": "America | United States | New York",
+		"CustomerAddress": "1100 Main Street 248 PH98, Manhattan, NYC",
+		"Products": [
+			{
+				"ProductId": 66,
+				"Qty": 8,
+				"UnitPrice": 10.0,
+				"TotalPrice": 80.0
+			},
+			{
+				"ProductId": 100,
+				"Qty": 3,
+				"UnitPrice": 10.0,
+				"TotalPrice": 30.0
+			},
+			{
+				"ProductId": 117,
+				"Qty": 7,
+				"UnitPrice": 5.0,
+				"TotalPrice": 35.0
+			}
+		],
+		"ProductsCount": 3,
+		"TotalOrder": 145.0
+	},
+	{
+		"_id": 2,
+		"OrderDate": "2023-01-20T00:00:00",
+		"CustomerId": 3,
+		"CustomerName": "Shakira Mebarak",
+		"CustomerLocationCity": "Barcelona",
+		"CustomerLocationHierarchy": "Europe | Spain | Barcelona",
+		"CustomerAddress": "Ciudad Diagonal, Esplugas de Llobregat",
+		"Products": [
+			{
+				"ProductId": 132,
+				"Qty": 1,
+				"UnitPrice": 14.0,
+				"TotalPrice": 14.0
+			}
+		],
+		"ProductsCount": 1,
+		"TotalOrder": 14.0
+	},
+	{
+		"_id": 3,
+		"OrderDate": "2023-01-30T00:00:00",
+		"CustomerId": 1,
+		"CustomerName": "Tom Cruise",
+		"CustomerLocationCity": "New York",
+		"CustomerLocationHierarchy": "America | United States | New York",
+		"CustomerAddress": "1100 Main Street 248 PH98, Manhattan, NYC",
+		"Products": [
+			{
+				"ProductId": 66,
+				"Qty": 1,
+				"UnitPrice": 10.0,
+				"TotalPrice": 10.0
+			},
+			{
+				"ProductId": 114,
+				"Qty": 4,
+				"UnitPrice": 20.0,
+				"TotalPrice": 80.0
+			}
+		],
+		"ProductsCount": 2,
+		"TotalOrder": 90.0
+	},
+	{
+		"_id": 4,
+		"OrderDate": "2023-04-29T15:54:10.313",
+		"CustomerId": 1,
+		"CustomerName": "Tom Cruise",
+		"CustomerLocationCity": "New York",
+		"CustomerLocationHierarchy": "America | United States | New York",
+		"CustomerAddress": "1100 Main Street 248 PH98, Manhattan, NYC",
+		"Products": [
+			{
+				"ProductId": 66,
+				"Qty": 2,
+				"UnitPrice": 10.0,
+				"TotalPrice": 20.0
+			},
+			{
+				"ProductId": 132,
+				"Qty": 2,
+				"UnitPrice": 14.0,
+				"TotalPrice": 28.0
+			}
+		],
+		"ProductsCount": 2,
+		"TotalOrder": 48.0
+	},
+	{
+		"_id": 5,
+		"OrderDate": "2023-04-29T15:54:10.313",
+		"CustomerId": 2,
+		"CustomerName": "Kylian Mbappé",
+		"CustomerLocationCity": "Paris",
+		"CustomerLocationHierarchy": "Europe | France | Paris",
+		"CustomerAddress": "PL. Charles de Gaulle, 75008",
+		"Products": [
+			{
+				"ProductId": 132,
+				"Qty": 5,
+				"UnitPrice": 14.0,
+				"TotalPrice": 70.0
+			}
+		],
+		"ProductsCount": 1,
+		"TotalOrder": 70.0
+	},
+	{
+		"_id": 6,
+		"OrderDate": "2023-04-29T15:54:10.313",
+		"CustomerId": 5,
+		"CustomerName": "Thomas Müller",
+		"CustomerLocationCity": "Köln",
+		"CustomerLocationHierarchy": "Europe | Germany | Cologne",
+		"CustomerAddress": "Domkloster 4, 50667 Köln",
+		"Products": [
+			{
+				"ProductId": 132,
+				"Qty": 3,
+				"UnitPrice": 14.0,
+				"TotalPrice": 42.0
+			}
+		],
+		"ProductsCount": 1,
+		"TotalOrder": 42.0
+	},
+	{
+		"_id": 7,
+		"OrderDate": "2023-04-29T15:54:10.313",
+		"CustomerId": 4,
+		"CustomerName": "Maria",
+		"CustomerLocationCity": "Bogota",
+		"CustomerLocationHierarchy": "America | Colombia | Bogota",
+		"CustomerAddress": "Av Trancón 123",
+		"ProductsCount": 0,
+		"TotalOrder": 0.0
+	}
+]
