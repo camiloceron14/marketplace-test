@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Marketplace.Bl\Marketplace.Bl.csproj" />
+    <ProjectReference Include="..\Marketplace.Core\Marketplace.Core.csproj" />
+    <ProjectReference Include="..\Marketplace.Dal\Marketplace.Dal.csproj" />
+  </ItemGroup>
+
+</Project>
