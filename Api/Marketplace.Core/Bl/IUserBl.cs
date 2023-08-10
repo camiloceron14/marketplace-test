@@ -25,5 +25,13 @@ public interface IUserBl
     /// <returns>LIst of users</returns>
     Task<IEnumerable<User>> GetUsersAsync();
 
+    /// <summary>
+    ///     Gets the users.
+    /// </summary>
+    /// <returns>GetUserByUsername</returns>
+    Task<User> GetUserByUsername(string username);
+
+    Task<User> SaveUser(string username);
+
     #endregion
 }

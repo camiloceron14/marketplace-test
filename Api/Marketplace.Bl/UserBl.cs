@@ -36,7 +36,6 @@ public class UserBl : IUserBl
     {
         this.userRepository = userRepository;
     }
-
     #endregion
 
     #region Methods
@@ -45,6 +44,16 @@ public class UserBl : IUserBl
     public async Task<IEnumerable<User>> GetUsersAsync()
     {
         return await userRepository.GetAllUsersAsync().ConfigureAwait(false);
+    }
+
+    public async Task<User> GetUserByUsername(string username)
+    {
+        return await userRepository.GetUserByUsername(username);
+    }
+
+    public async Task<User> SaveUser(string username)
+    {
+        return await userRepository.SaveUser(username);
     }
 
     #endregion

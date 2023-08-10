@@ -72,6 +72,51 @@ namespace Marketplace.Api.Controllers
             return this.Ok(result);
         }
 
+        // GET api/user/firstname/lastname/address
+        [HttpGet("{username}")]
+        public async Task<ActionResult<User>> GetUserByUsername(string username)
+        {
+            User result;
+
+            try
+            {
+                result = await this.userBl.GetUserByUsername(username).ConfigureAwait(false);
+            }
+            catch (Exception ex)
+            {
+                this.logger?.LogError(ex, ex.Message);
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Server Error.");
+            }
+
+            return this.Ok(result);
+        }
+
+        /// <summary>
+        /// login user.
+        /// </summary>
+        /// <returns>login user</returns>
+        [HttpPost("~/User/login")]
+        public async Task<IActionResult> post([FromBody] User user)
+        {
+            User result;
+
+            try
+            {
+                result = await this.userBl.GetUserByUsername(user.Username).ConfigureAwait(false);
+                if (result == null)
+                {
+                    result = await this.userBl.SaveUser(user.Username).ConfigureAwait(false);
+                }
+            }
+            catch (Exception ex)
+            {
+                this.logger?.LogError(ex, ex.Message);
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Server Error.");
+            }
+
+            return this.Ok(result);
+        }
+
         #endregion
     }
 }
