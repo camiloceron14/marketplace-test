@@ -1,26 +1,57 @@
-<form class="offer-form">
-  <h3>Post new Offer</h3>
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input id="title" class="" placeholder="Title"/>
+<div class="post-offer-container">
+  <div class="row justify-content-md-center">
+    <div class=" col-xs-12 col-md-10 col-lg-8 col-xl-6">
+      <form class="form-post-offer" [formGroup]="offerForm">
+        <h2 class="title-post-offer">Post new</h2>
+        <div class="form-group">
+          <label for="title" class="form-label">Title</label>
+          <input id="title"
+            formControlName="titleCtrl"
+            [(ngModel)]="offer.title"
+            class="form-control"
+            [ngClass]="{'is-invalid': offerForm.get('titleCtrl').errors && (offerForm.get('titleCtrl').dirty || offerForm.get('titleCtrl').touched) }"
+            placeholder="Title"/>
+        </div>
+        <div class="form-group">
+          <label for="picture-url" class="form-label">Picture URL</label>
+          <input id="picture-url"
+            formControlName="pictureUrlCtrl"
+            [(ngModel)]="offer.pictureUrl"
+            class="form-control"
+            [ngClass]="{'is-invalid': offerForm.get('pictureUrlCtrl').errors && (offerForm.get('pictureUrlCtrl').dirty || offerForm.get('pictureUrlCtrl').touched) }"
+            placeholder="offers/iphone.jpg"/>
+        </div>
+        <div class="form-group">
+          <label for="description" class="form-label">Description</label>
+          <textarea id="description"
+            formControlName="descriptionCtrl"
+            [(ngModel)]="offer.description"
+            class="form-control"
+            [ngClass]="{'is-invalid': offerForm.get('descriptionCtrl').errors && (offerForm.get('descriptionCtrl').dirty || offerForm.get('descriptionCtrl').touched) }"
+            placeholder="Description"
+            rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="location" class="form-label">Location</label>
+          <input id="location"
+            formControlName="locationCtrl"
+            [(ngModel)]="offer.location"
+            class="form-control"
+            [ngClass]="{'is-invalid': offerForm.get('locationCtrl').errors && (offerForm.get('locationCtrl').dirty || offerForm.get('locationCtrl').touched) }"
+            placeholder="Country, city, neighborhood, the office, my desk, etc..."/>
+        </div>
+        <div class="form-group">
+          <label for="category" class="form-label">Category</label>
+          <select id="category"
+            class="form-select"
+            [(ngModel)]="offer.categoryId"
+            [ngClass]="{'is-invalid': offerForm.get('categoryCtrl').errors && (offerForm.get('categoryCtrl').dirty || offerForm.get('categoryCtrl').touched) }"
+            formControlName="categoryCtrl">
+              <option [value]="item.id" *ngFor="let item of categories">{{item.name}}</option>
+          </select>
+        </div>
+        <button type="submit" (click)="offerSubmit()" class="btn btn-primary">Create</button>
+      </form>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="picture-url">Picture URL</label>
-    <input id="picture-url" placeholder="offers/iphone.jpg"/>
-  </div>
-  <div class="form-group">
-    <label for="description">Description</label>
-    <textarea id="description" class="" placeholder="Description" rows="5"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="location">Location</label>
-    <input id="location" class="" placeholder="Country, city, neighborhood, the office, my desk, etc..."/>
-  </div>
-  <div class="form-group">
-    <label for="category">Category</label>
-    <select id="category" class="">
-      <option [value]="item" *ngFor="let item of categories">{{item}}</option>
-    </select>
-  </div>
-  <button type="submit" class="offer-submit-button">Create</button>
-</form>
+</div>

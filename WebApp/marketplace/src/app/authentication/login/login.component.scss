@@ -1,0 +1,20 @@
+.login-container {
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .form-login {
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0 0 3px #c4c4c4;
+    margin: 19px;
+  }
+  
+  .title-login {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  

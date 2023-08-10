@@ -27,9 +27,10 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": ["./node_modules/jquery/dist/jquery.js", "./node_modules/bootstrap/dist/js/bootstrap.js"],
             "vendorChunk": true,
             "extractLicenses": false,
             "buildOptimizer": false,
@@ -130,5 +131,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "610ed8cc-0289-436e-82cb-ab561503c294"
   }
 }

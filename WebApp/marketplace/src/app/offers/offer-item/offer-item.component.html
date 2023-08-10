@@ -1,12 +1,15 @@
-<div>
-  <h3 class="title"></h3>
-  <div class="category"></div>
-  <div class="picture">
-    <img src="" alt="offer-image" />
-  </div>
-  <div class="byline">
-    <span class="user"></span>
-    <span class="published-on"></span>
-  </div>
-  <p class="description"></p>
+<div class="item-container">
+  <h3 class="title">
+    {{offer.title}}
+  </h3>
+  <div class="category">{{ offer.category?.name }}</div>
+  <div class="picture" [style.backgroundImage]="offer.pictureUrl | image"></div>
+  <div class="info">
+    <div class="byline">
+      <span class="user"> {{ offer.user?.username }} </span>
+      <span class="published-on">{{ offer.publishedOn }}</span>
+    </div>
+    <p class="description">
+      {{offer.description}}
+    </p>
 </div>

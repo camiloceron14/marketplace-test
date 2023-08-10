@@ -1,1 +1,16 @@
-<p>offer-list works!</p>
+<div class="row">
+    <div *ngFor="let offer of offers; let first = first;"
+         class="col-xs-12 col-md-6"
+         [ngClass]="{ 'col-lg-12': first, 'col-lg-4': !first }">
+      <div class="item">
+        <app-offer-item [offer]="offer"></app-offer-item>
+      </div>
+    </div>
+  </div>
+  <app-pagination
+    [totalPages]="totalPages"
+    [hasNext]="hasNext"
+    [hasPrevious]="hasPrevious"
+    (changePageEvent)="onChagePage($event)">
+  </app-pagination>
+  

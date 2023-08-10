@@ -1,3 +1,17 @@
-<form>
-  <input id="user-name">
-</form>
+<div class="login-container">
+  <h2 class="title-login">Login</h2>
+  <div class="row justify-content-md-center">
+    <div class=" col-xs-12 col-md-10 col-lg-8 col-xl-6">
+      <form class="form-login" (ngSubmit)="login()">
+        <h4 class="title-login">Enter your name to start session</h4>
+        <div class="mb-3">
+          <input [(ngModel)]="username"
+                 name="username"
+                 type="text" class="form-control"
+                 id="user-name" placeholder="Username">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
