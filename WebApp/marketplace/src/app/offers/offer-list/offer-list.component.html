@@ -7,10 +7,12 @@
       </div>
     </div>
   </div>
-  <app-pagination
-    [totalPages]="totalPages"
-    [hasNext]="hasNext"
-    [hasPrevious]="hasPrevious"
-    (changePageEvent)="onChagePage($event)">
-  </app-pagination>
+  
+  <div *ngIf="isLoading">
+    <app-paginator
+      [total]="totalPagesNum"
+      (changePageEvent)="onChagePage($event)"
+    >
+  </app-paginator>
+  </div>
   

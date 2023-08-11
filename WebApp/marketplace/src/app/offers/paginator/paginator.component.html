@@ -1,0 +1,37 @@
+<div class="pagination">
+    <button [disabled]="value.page === 1" (click)="selectPage(1)"><<</button>
+    <button [disabled]="value.page === 1" (click)="selectPage(value.page - 1)">
+      <
+    </button>
+    <button
+      *ngFor="let page of visiblePages"
+      [ngClass]="value.page === page && 'selected'"
+      (click)="selectPage(page)"
+    >
+      {{ page }}
+    </button>
+    <button
+      [disabled]="value.page === totalPages"
+      (click)="selectPage(value.page + 1)"
+    >
+      >
+    </button>
+    <button
+      [disabled]="value.page === totalPages"
+      (click)="selectPage(totalPages)"
+    >
+      >>
+    </button>
+  </div>
+  
+  <div class="form-group">
+    <label for="picture-url" class="form-label">Go to page</label>
+    <input
+      type="number"
+      id="picture-url"
+      [(ngModel)]="goToPage"
+      class="form-control"
+    />
+    <button (click)="goPage()">GO</button>
+  </div>
+  
